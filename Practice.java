@@ -4,14 +4,27 @@ public class Practice {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		String var = sc.nextLine();
-		var = var.toLowerCase();
-		System.out.println(var);
-		var = var.substring(0,1);
-		System.out.println(var);
+		char op = sc.next().trim().charAt(0);
 		
-		sc.close();
+		
+		int result = 0;
+		while(true) {
+		
+		if (op == '+'||op =='-'||op =='/') {
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+		if(op == '+') {
+			
+			result = a+b;
+		}else if (op == '-'){
+			result = a-b;
+		}
+		}else if (op =='x'||op =='X') {
+			break;
+		}else {
+			System.out.println("invalid");
+		}System.out.println(result);
 
-	}
+	}}
 
 }
